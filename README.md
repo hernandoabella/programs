@@ -1,5 +1,5 @@
 # Programs4Beginners
-program collection for beginners
+Best program collection for beginners
 
 ## Supported Languages:
 - JavaScript
