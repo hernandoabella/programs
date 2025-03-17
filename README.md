@@ -2,6 +2,7 @@
 Best program collection for beginners
 
 ## Supported Languages:
+- Python
 - JavaScript
 - TypeScript
 - Java
