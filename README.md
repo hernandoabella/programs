@@ -1,11 +1,11 @@
 # Programs4Beginners
 Best program collection for beginners
 
-## Supported Languages:
+## Select your language:
 - Python
 - JavaScript
 - TypeScript
 - Java
 - C
-- CPP
-- C-Sharp
+- Cpp
+- C#
