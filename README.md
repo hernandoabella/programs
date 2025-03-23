@@ -2,8 +2,8 @@
 Programs collection for beginners
 
 ## Select your weapon 🗡️:
-- [Python]()
-- [JavaScript]()
-- [Java]()
-- [C]()
-- [Rust]()
+- [Python](./python-programs.md)
+- [JavaScript](./javascript-programs.md)
+- [Java](./java-programs.md)
+- [C](./c-programs.md)
+- [Rust](rust-programs.md)
