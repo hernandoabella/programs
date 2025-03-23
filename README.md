@@ -1,11 +1,9 @@
-# Programs4Beginners
-Best program collection for beginners
+# Programs for beginners
+Programs collection for beginners
 
-## Select your language:
-- Python
-- JavaScript
-- TypeScript
-- Java
-- C
-- Cpp
-- C#
+## Select your weapon 🗡️:
+- [Python]()
+- [JavaScript]()
+- [Java]()
+- [C]()
+- [Rust]()
