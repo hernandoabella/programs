@@ -5344,18 +5344,3 @@ def generate_ascii_triangle(height):
 
 triangle_height = 5
 generate_ascii_triangle(triangle_height)
-
- 
-In every line of code, they have woven a story of innovation and creativity. This book has been your compass in the vast world of Python. 
-Close this chapter knowing that every challenge overcome is an achievement, and every solution is a step toward mastery.
-Your code is the melody that gives life to projects. May they continue creating and programming with passion!
-Thank you for allowing me to be part of your journey.
-With gratitude,
-Hernando Abella 
-200+ Python Programs
-
-Discover Other Useful Resources at:
-www.hernandoabella.com
-www.beat-byte-publishing.com
-
-
