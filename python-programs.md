@@ -1,261 +1,14 @@
-200+ Python Programs for Beginners
-By Hernando Abella
+# 200+ Python Programs for Beginners
  
+### 1. Print Hello World
 
-ALUNA PUBLISHING HOUSE
-
-
-Thank you for trusting our Publishing House. If you have the opportunity to evaluate our work and give us a comment on Amazon, we will appreciate it very much!
-
-This Book may not be copied or printed without the permission of the author.
-
-COPYRIGHT 2024 ALUNA PUBLISHING HOUSE
- 
-Table of contents
-Intro	12
-1. Print Hello World	13
-2. Add Two Numbers	14
-3. Find the Square Root	15
-4. Calculate the Area of a Triangle	16
-5. Swap Two Variables	17
-6. Solve Quadratic Equation	18
-7. Convert Kilometers to Miles	19
-8. Convert Celsius to Fahrenheit	20
-9. Generate a Random Number	21
-10. Check if a number is Positive, Negative, or Zero	22
-11. Check if a Number is Odd or Even	23
-12. Find the Largest Among Three Numbers	24
-13. Check Prime Number	25
-14. Print All Prime Numbers in an Interval	26
-15. Find the Factorial of a Number	28
-16. Display the Multiplication Table	29
-17. Print the Fibonacci Sequence	30
-18. Check Armstrong Number	31
-19. Find Armstrong Number in an Interval	32
-20. Make a Simple Calculator	34
-21. Find the Sum of Natural Numbers	36
-22. Check if the Numbers Have the Same Last Digit	37
-23. Find HCF or GCD	38
-24. Find LCM	39
-25. Find the Factors of a Number	40
-26. Find Sum of Natural Numbers Using Recursion	41
-27. Guess a Random Number	42
-28. Shuffle Deck of Cards	43
-29. Display Fibonacci Sequence Using Recursion	45
-30. Find Factorial of Number Using Recursion	46
-31. Convert Decimal to Binary	47
-32. Find ASCII Value of Character	48
-33. Check Whether a String is Palindrome or Not	49
-34. Sort Words in Alphabetical Order	50
-35. Replace Characters of a String	51
-36. Reverse a String	52
-37. Check the Number of Occurrences of a Character in the String	53
-38. Convert the First Letter of a String into UpperCase	54
-39. Count the Number of Vowels in a String	55
-40. Check Whether a String Starts and Ends With Certain Characters	56
-41. Replace All Occurrences of a String	57
-42. Create Multiline Strings	58
-43. Format Numbers as Currency Strings	59
-44. Generate Random String	60
-45. Check if a String Starts with Another String	61
-46. Trim a String	62
-47. Check Whether a String Contains a Substring	63
-48. Compare Two Strings	64
-49. Encode a String to Base64	65
-50. Replace all Instances of a Character in a String	66
-51. Replace All Line Breaks with	67
-52. Check Leap Year	68
-53. Format the Date	69
-54. Display Current Date	70
-55. Compare The Value of Two Dates	71
-56. Create Countdown Timer	72
-57. Remove Specific Item From an Array	73
-58. Check if An Array Contains a Specified Value	74
-59. Insert Item in an Array	75
-60. Get Random Item From an Array	76
-61. Perform Intersection Between Two Arrays	77
-62. Split Array into Smaller Chunks	78
-63. Get File Extension	79
-64. Check If a Variable Is undefined or null	80
-65. Generate a Random Number Between Two Numbers	81
-66. Get The Current URL	82
-67. Validate An Email Address	83
-68. Check If a Variable is of Function Type	84
-69. Work With Constants	85
-70. Pass Parameter to a setTimeout() Function	86
-71. Generate a Range of Numbers and Characters	87
-72. Perform Function Overloading	88
-73. Implement a Stack	89
-74. Implement a Queue	91
-75. Check if a Number is Float or Integer	93
-76. Pass a Function as Parameter	94
-77. Get the Dimensions of an Image	95
-78. Remove All Whitespaces From a Text	96
-79. Write to Console	97
-80. Convert Date to Number	98
-81. Find the Average of Two Numbers	99
-82. Calculate the Area of a Circle	100
-83. Random Color Generator	101
-84. Check if a String is Empty	102
-85. Capitalize the First Letter of a String	103
-86. Find the Maximum Element in an Array	104
-87. Reverse an Array	105
-88. Calculate the Power of a Number	106
-89. Find the Minimum Element in an Array	107
-90. Convert Minutes to Hours and Minutes	108
-91. Find the Sum of Digits in a Number	109
-92. Check if a String is a Palindromic Phrase	110
-93. Generate a Random Password	111
-94. Calculate Simple Interest	112
-95. Implement a Basic Stopwatch	113
-96. Check if a Number is a Perfect Number	114
-97. This program calculates the Volume of a Cylinder	115
-98. Generate a Random Quote	116
-99. Find the Intersection of Two Arrays	117
-100. Convert Feet to Meters	118
-101. Convert Days to Years, Months, and Days	119
-102. Find the Median of an Array	120
-103. Calculate the Distance Between Two Points	121
-104. Check if a Number is a Perfect Square	122
-105. Find the Area of a Rectangle	123
-106. Convert Binary to Decimal	124
-107. Count the Number of Words in a Sentence	125
-108. Find the Union of Two Arrays	126
-109. Calculate the Factorial of a Large Number	127
-110. Check if a Number is a Strong Number	128
-111. Check if a Number is a Narcissistic Number	129
-112. Count the Number of Consonants in a String	130
-113. Check if a Number is a Triangular Number	131
-114. Find the Area of a Trapezoid	132
-115. Calculate the Greatest Common Divisor (GCD) of Two Numbers	133
-116. Check if a Number is a Fibonacci Number	134
-117. Find the Perimeter of a Rectangle	135
-118. Convert Roman Numerals to Numbers	136
-119. Check if a String is Anagram of Another String	138
-120. Generate Pascal's Triangle	140
-121. Convert Decimal to Roman Numerals	142
-122. Find the Area of a Parallelogram	144
-123. Basic Rock, Paper, Scissors Game	145
-124. Basic Slot Machine Game	147
-125. Check if a Number is a Smith Number	148
-126. Basic Chessboard	149
-127. Generate a Random Password with Specific Criteria	150
-128. Basic Maze Solver	152
-129. Check if a String is Pangram or Not	154
-130. Basic Sudoku Solver	155
-131. Convert Objects to Strings	158
-132. Find the Area of an Ellipse	159
-133. Check if a Number is a Palindrome in Binary	160
-134. Find the Area of a Rhombus	161
-135. Check if a Number is a Catalan Number	162
-136. Find the Luhn Algorithm Check Digit	163
-137. Basic Maze Generator	164
-138. Check if a Year is a Magic Year	166
-139. Basic Crossword Puzzle	167
-140. Find the Area of a Regular Polygon	169
-141. Check if a Number is an Abundant Number	170
-142. Basic Word Guessing Game	171
-143. Calculate the Euler's Totient Function	173
-144. Basic Memory Matching Game	174
-145. Check if a Number is a Vampire Number	177
-146. Basic Simon Says Game	179
-147. Calculate the Area of a Hexagon	181
-148. Check if a Number is a Pronic Number	182
-149. Basic Minesweeper Game	183
-150. Find the Area of a Pentagon	186
-151. Check if a Number is a Cube Number	187
-152. Basic Typing Speed Test	188
-153. Find the Area of a Cube	190
-154. Find the Area of a Cone	191
-155. Check if a Number is a Happy Number	192
-156. Calculate the Area of a Triangular Prism	193
-157. Check if a Number is a Fibonacci Prime	194
-158. Check if a Number is a Squareful Number	195
-159. Find the Area of a Tetrahedron	196
-160. Check if a Number is an Automorphic Number	197
-161. Calculate the Area of a Pyramid	198
-162. Check if a Number is a Smith–Morra Gambit Number	199
-163. Check if a Number is a Solitary Number	200
-164. Basic Tower of Hanoi Puzzle	201
-165. Calculate the Area of a Frustum	202
-166. Check if a Number is a Motzkin Number	203
-167. Check if a Number is a Padovan Number	204
-168. Calculate the Area of a Koch Snowflake	205
-169. Basic Chatbot	206
-170. RGB to HEX Converter	207
-171. Counter	208
-172. Stop The Bomb	209
-173. IP Address Generator	210
-174. Digital clock	211
-175. Random Number Generator	212
-176. Simple JavaScript Quiz	213
-177. Text-based RPG Adventure	215
-178. Dice Rolling Simulator	216
-179. Seconds to Time Converter	217
-180. Bar Chart Generator	218
-181. Right-Angled Triangle Pattern	219
-182. Text-Based Calculator	220
-183. Number Pyramid Generator	221
-184. Diamond Pattern Generator	222
-185. Hangman Game	223
-186. Countdown Timer	225
-187. Mad Libs Game	226
-188. Guess the Number Game	227
-189. Whack-a-Mole Game	228
-190. Coin Tossing Game	230
-191. Fibonacci Number Generator	232
-192. Math Quiz Game	233
-193. Color Guessing Game	234
-194. Word Scramble Game	236
-195. Country Capital Quiz Game	238
-196. Guess the Animal	239
-197. Joke Teller	240
-198. Shopping List	242
-199. FizzBuzz Game	244
-200. Swap Pairs of Adjacent Digits	245
-201. Capitalization Changer	246
-202. Array Halves Swapper	247
-203. Sum of Digits in String	248
-204. Sum of Cubes	249
-205. Maximum Integer for Sum	250
-206. URL Breakdown	251
-207. Sort Strings by Length	252
-208. Simplify Absolute Path	253
-209. Count Common Elements in Arrays	254
-210. Check Same Digits in a Number	255
-211. Rightmost Round Number Position	256
-212. Reverse Bits of 16-Bit Unsigned Short Integer	257
-213. Greater Than 15 Checker	258
-214. Replace First Digit with $	259
-215. Prefix Sums	260
-216. Next Prime Number	261
-217. Reverse Order of Bits	262
-218. Pyramid	263
-
-
-
-
-
-
-
-
-Introduction
-Programming in Python was complicated until you appreciated this wonderful book. 
-Focus on the most important thing writing code, starting from the first program to the last will help you quickly increase your skills as a programmer and will give you the knowledge necessary to understand: 
-The flow of a program, the syntax, the direction, how it works, what Add keywords to your code, make great decisions, and much more.
-This is a very essential guide with which you can learn to create more than... Once you have solved a certain number of programs, you will be able to develop yourself and turn your own ideas into a reality without even having to think about it.
-
-
-
-
-
-1. Print Hello World
-
+```
 print("Hello, World!")
-
+```
  
-2. Add Two Numbers
+### 2. Add Two Numbers
 
+```
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 
@@ -264,10 +17,11 @@ if not (num1.is_nan() or num2.is_nan()):
     print(f"The sum of {num1} and {num2} is: {sum_result}")
 else:
     print("Please enter valid numbers.")
-
+```
  
-3. Find the Square Root
+### 3. Find the Square Root
 
+```
 import math
 
 input_number = float(input("Enter a non-negative number: "))
@@ -277,10 +31,11 @@ if not (math.isnan(input_number) or input_number < 0):
     print(f"The square root of {input_number} is: {square_root}")
 else:
     print("Please enter a valid non-negative number.")
-
+```
  
-4. Calculate the Area of a Triangle
+### 4. Calculate the Area of a Triangle
 
+```
 base = float(input("Enter the base of the triangle: "))
 height = float(input("Enter the height of the triangle: "))
 
@@ -289,10 +44,11 @@ if not (math.isnan(base) or math.isnan(height) or base <= 0 or height <= 0):
     print(f"The area of the triangle with base {base} and height {height} is: {area}")
 else:
     print("Please enter valid positive numbers for base and height.")
-
+```
  
-5. Swap Two Variables
+### 5. Swap Two Variables
 
+```
 variable1 = input("Enter the first variable: ")
 variable2 = input("Enter the second variable: ")
 
@@ -304,10 +60,11 @@ variable1 = variable2
 variable2 = temp
 
 print(f"After swapping: Variable1 = {variable1}, Variable2 = {variable2}")
-
+```
  
-6. Solve Quadratic Equation
+### 6. Solve Quadratic Equation
 
+```
 import math
 
 # Prompt user for coefficients
@@ -331,9 +88,11 @@ if not (math.isnan(a) or math.isnan(b) or math.isnan(c)):
         print("The quadratic equation has complex roots.")
 else:
     print("Please enter valid numbers for coefficients.")
- 
-7. Convert Kilometers to Miles
+```
 
+### 7. Convert Kilometers to Miles
+
+```
 # Prompt user for distance in kilometers
 kilometers = float(input("Enter the distance in kilometers: "))
 
@@ -347,11 +106,11 @@ if not math.isnan(kilometers):
     print(f"{kilometers} kilometers is approximately {miles} miles.")
 else:
     print("Please enter a valid number for the distance in kilometers.")
+```
 
+### 8. Convert Celsius to Fahrenheit
 
- 
-8. Convert Celsius to Fahrenheit
-
+```
 # Prompt user for temperature in Celsius
 celsius = float(input("Enter the temperature in Celsius: "))
 
@@ -362,11 +121,11 @@ if not math.isnan(celsius):
     print(f"{celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit.")
 else:
     print("Please enter a valid number for the temperature in Celsius.")
+```
 
+### 9. Generate a Random Number
 
- 
-9. Generate a Random Number
-
+```
 import random
 
 # Prompt user for the range
@@ -380,10 +139,11 @@ if not (math.isnan(min_range) or math.isnan(max_range) or min_range >= max_range
     print(f"A random number between {min_range} and {max_range} is: {random_number}")
 else:
     print("Please enter valid numbers, ensuring that the minimum value is less than the maximum value.")
-
+```
  
-10. Check if a number is Positive, Negative, or Zero
+### 10. Check if a number is Positive, Negative, or Zero
 
+```
 # Prompt user for a number
 number = float(input("Enter a number: "))
 
@@ -398,6 +158,7 @@ if not math.isnan(number):
         print("The entered number is zero.")
 else:
     print("Please enter a valid number.")
+```
  
 11. Check if a Number is Odd or Even
 
