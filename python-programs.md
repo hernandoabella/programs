@@ -4793,6 +4793,7 @@ color_guessing_game()
  
 194. Word Scramble Game
 
+```
 import random
 
 def word_scramble_game():
@@ -4827,11 +4828,11 @@ def scramble_word(word):
 
 # Start the Word Scramble Game
 word_scramble_game()
+````
 
+### 195. Country Capital Quiz Game
 
- 
-195. Country Capital Quiz Game
-
+```
 def country_capital_quiz_game():
     country_capital_pairs = [
         {"country": "France", "capital": "Paris"},
@@ -4864,10 +4865,11 @@ def country_capital_quiz_game():
 
 # Start the Country Capital Quiz Game
 country_capital_quiz_game()
-
+```
  
-196. Guess the Animal
+### 196. Guess the Animal
 
+```
 def guess_the_animal_game():
     animals = [
         {"name": "elephant", "clues": ["I have a long trunk.", "I am the largest land animal."]},
@@ -4897,9 +4899,11 @@ def guess_the_animal_game():
 
 # Start the Guess the Animal Game
 guess_the_animal_game()
- 
-197. Joke Teller 
+```
+ 
+### 197. Joke Teller 
 
+```
 import random
 
 def joke_teller_program():
@@ -4935,10 +4939,11 @@ def joke_teller_program():
 
 # Start the Joke Teller Program
 joke_teller_program()
+```
 
+### 198. Shopping List
 
-198. Shopping List
-
+```
 def shopping_list_program():
     shopping_list = []
 
@@ -4981,10 +4986,11 @@ def shopping_list_program():
 
 # Start the Shopping List Program
 shopping_list_program()
-
+```
  
-199. FizzBuzz Game
+### 199. FizzBuzz Game
 
+```
 def fizz_buzz_game():
     print("Welcome to the FizzBuzz Game!")
     print("Let's play FizzBuzz!")
@@ -5002,10 +5008,11 @@ def fizz_buzz_game():
 
 # Start the FizzBuzz Game
 fizz_buzz_game()
-
+```
  
-200. Swap Pairs of Adjacent Digits
+### 200. Swap Pairs of Adjacent Digits
 
+```
 def swap_pairs_of_adjacent_digits(number):
     # Convert the number to a string to manipulate individual digits
     number_str = str(number)
@@ -5028,10 +5035,11 @@ def swap_pairs_of_adjacent_digits(number):
 
 # Example: Swap pairs of adjacent digits of the number 123456
 swap_pairs_of_adjacent_digits(123456)
-
+```
  
-201. Capitalization Changer
+### 201. Capitalization Changer
 
+```
 def change_capitalization(input_string):
     result_string = ""
 
@@ -5049,12 +5057,11 @@ def change_capitalization(input_string):
 
 # Example: Change the capitalization of the string "Hello World"
 change_capitalization("Hello World")
-
-
-
+```
  
-202. Array Halves Swapper
+### 202. Array Halves Swapper
 
+```
 def swap_array_halves(arr):
     length = len(arr)
 
@@ -5075,10 +5082,11 @@ def swap_array_halves(arr):
 
 # Example: Swap halves of the array [1, 2, 3, 4, 5, 6]
 swap_array_halves([1, 2, 3, 4, 5, 6])
-
+```
  
-203. Sum of Digits in String
+### 203. Sum of Digits in String
 
+```
 def sum_of_digits_in_string(input_string):
     digit_sum = 0
 
@@ -5093,9 +5101,10 @@ def sum_of_digits_in_string(input_string):
 
 # Example: Compute the sum of digits in the string "abc123xyz456"
 sum_of_digits_in_string("abc123xyz456")
-
+```
  
-204. Sum of Cubes
+### 204. Sum of Cubes
+```
 def sum_of_cubes(up_to_integer):
     cubes_sum = 0
 
@@ -5107,10 +5116,11 @@ def sum_of_cubes(up_to_integer):
 
 # Example: Compute the sum of cubes up to the integer 5
 sum_of_cubes(5)
-
+```
  
-205. Maximum Integer for Sum
+### 205. Maximum Integer for Sum
 
+```
 def find_max_integer_for_sum(target_sum):
     current_sum = 0
     max_integer = 0
@@ -5123,10 +5133,11 @@ def find_max_integer_for_sum(target_sum):
 
 # Example: Find the maximum integer for the sum <= 15
 find_max_integer_for_sum(15)
-
+```
  
-206. URL Breakdown
+### 206. URL Breakdown
 
+```
 import re
 
 def break_url(url):
@@ -5147,10 +5158,11 @@ def break_url(url):
 
 # Example: Breakdown the URL "https://www.example.org/page"
 break_url("https://www.example.org/page")
+```
 
- 
-207. Sort Strings by Length
+### 207. Sort Strings by Length
 
+```
 def sort_strings_by_length(strings_array):
     sorted_array = sorted(strings_array, key=len)
 
@@ -5161,10 +5173,11 @@ def sort_strings_by_length(strings_array):
 
 # Example: Sort strings by length
 sort_strings_by_length(["apple", "banana", "orange", "kiwi", "grape"])
-
+```
  
-208. Simplify Absolute Path
+### 208. Simplify Absolute Path
 
+```
 def simplify_absolute_path(path):
     parts = path.split('/')
     simplified_parts = []
@@ -5183,10 +5196,11 @@ def simplify_absolute_path(path):
 
 # Example: Simplify an absolute path
 simplify_absolute_path('/home/user/../documents/./file.txt')
-
+```
  
-209. Count Common Elements in Arrays
+### 209. Count Common Elements in Arrays
 
+```
 def count_common_elements(arr1, arr2):
     common_elements = [element for element in arr1 if element in arr2]
     number_of_common_elements = len(common_elements)
@@ -5198,10 +5212,10 @@ def count_common_elements(arr1, arr2):
 
 # Example: Count common elements between two arrays
 count_common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
-
+```
  
-210. Check Same Digits in a Number
-
+### 210. Check Same Digits in a Number
+```
 def are_all_digits_same(number):
     number_str = str(number)
     first_digit = number_str[0]
@@ -5215,10 +5229,11 @@ def are_all_digits_same(number):
 
 # Example: Check if all digits in the number 22222 are the same
 are_all_digits_same(22222)
-
+```
  
-211. Rightmost Round Number Position
+### 211. Rightmost Round Number Position
 
+```
 def rightmost_round_number_position(arr):
     for i in range(len(arr) - 1, -1, -1):
         if arr[i] % 10 == 0:
@@ -5229,10 +5244,11 @@ def rightmost_round_number_position(arr):
 
 # Example: Find the position of the rightmost round number
 rightmost_round_number_position([123, 450, 678, 900])
-
+```
  
-212. Reverse Bits of 16-Bit Unsigned Short Integer
+### 212. Reverse Bits of 16-Bit Unsigned Short Integer
 
+```
 def reverse_bits_16_bit_unsigned_short(integer):
     binary_representation = format(integer, '016b')
     reversed_binary = binary_representation[::-1]
@@ -5245,11 +5261,11 @@ def reverse_bits_16_bit_unsigned_short(integer):
 
 # Example: Reverse bits of the 16-bit unsigned short integer 5678
 reverse_bits_16_bit_unsigned_short(5678)
-
-
+```
  
-213. Greater Than 15 Checker
+### 213. Greater Than 15 Checker
 
+```
 def greater_than_15_checker(number):
     result = number if number > 15 else 15
     print(f"Given Number: {number}")
@@ -5257,10 +5273,11 @@ def greater_than_15_checker(number):
 
 # Example: Test whether the number 20 is greater than 15
 greater_than_15_checker(20)
-
+```
  
-214. Replace First Digit with $
+### 214. Replace First Digit with $
 
+```
 import re
 
 def replace_first_digit_with_dollar(input_string):
@@ -5270,11 +5287,11 @@ def replace_first_digit_with_dollar(input_string):
 
 # Example: Replace the first digit with $ in the string "abc123xyz456"
 replace_first_digit_with_dollar("abc123xyz456")
+```
 
+### 215. Prefix Sums
 
- 
-215. Prefix Sums
-
+```
 def prefix_sums(input_array):
     prefix_sum = 0
     prefix_sum_array = []
@@ -5288,10 +5305,11 @@ def prefix_sums(input_array):
 
 # Example: Create prefix sums for the array [1, 2, 3, 4, 5]
 prefix_sums([1, 2, 3, 4, 5])
-
+```
  
-216. Next Prime Number
+### 216. Next Prime Number
 
+```
 def is_prime(num):
     if num < 2:
         return False
@@ -5311,13 +5329,11 @@ def next_prime_number(given_number):
 
 # Example: Find the next prime number greater than 10
 next_prime_number(10)
+```
 
+### 217. Reverse Order of Bits
 
-
-
- 
-217. Reverse Order of Bits
-
+```
 def reverse_order_of_bits(integer):
     binary_representation = bin(integer)[2:].zfill(8)  # Assuming 8 bits for simplicity
     reversed_binary = binary_representation[::-1]
@@ -5332,10 +5348,10 @@ def reverse_order_of_bits(integer):
 reverse_order_of_bits(14)
 reverse_order_of_bits(56)
 reverse_order_of_bits(234)
-
+````
  
-218. Pyramid
-
+### 218. Pyramid
+```
 def generate_ascii_triangle(height):
     for i in range(1, height + 1):
         spaces = ' ' * (height - i)
@@ -5344,3 +5360,4 @@ def generate_ascii_triangle(height):
 
 triangle_height = 5
 generate_ascii_triangle(triangle_height)
+```
