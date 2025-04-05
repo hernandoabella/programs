@@ -160,8 +160,9 @@ else:
     print("Please enter a valid number.")
 ```
  
-11. Check if a Number is Odd or Even
+### 11. Check if a Number is Odd or Even
 
+```
 # Prompt user for a number
 number = input("Enter a number: ")
 
@@ -175,10 +176,11 @@ if number.isdigit():
         print(f"{number} is an odd number.")
 else:
     print("Please enter a valid integer.")
-
+```
  
-12. Find the Largest Among Three Numbers
+### 12. Find the Largest Among Three Numbers
 
+```
 # Prompt user for three numbers
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
@@ -191,9 +193,11 @@ if not (math.isnan(num1) or math.isnan(num2) or math.isnan(num3)):
     print(f"The largest number among {num1}, {num2}, and {num3} is: {largest_number}")
 else:
     print("Please enter valid numbers for all three inputs.")
+```
  
-13. Check Prime Number
+### 13. Check Prime Number
 
+```
 # Prompt user for a number
 number = int(input("Enter a number: "))
 
@@ -214,10 +218,11 @@ if number > 1:
         print(f"{number} is not a prime number.")
 else:
     print("Please enter a valid integer greater than 1.")
-
+```
  
-14. Print All Prime Numbers in an Interval
+### 14. Print All Prime Numbers in an Interval
 
+```
 # Prompt user for the interval
 start_number = int(input("Enter the starting number of the interval: "))
 end_number = int(input("Enter the ending number of the interval: "))
@@ -247,11 +252,11 @@ else:
     print(
         "Please enter valid integers, ensuring that the starting number is less than the ending number and greater than 1."
     )
-
-
+```
  
-15. Find the Factorial of a Number
+### 15. Find the Factorial of a Number
 
+```
 # Prompt user for a non-negative integer
 number = int(input("Enter a non-negative integer: "))
 
@@ -265,10 +270,11 @@ if isinstance(number, int) and number >= 0:
     print(f"The factorial of {number} is: {factorial}")
 else:
     print("Please enter a valid non-negative integer.")
-
+```
  
-16. Display the Multiplication Table
+### 16. Display the Multiplication Table
 
+```
 # Prompt user for a number
 number = int(input("Enter a number for the multiplication table: "))
 
@@ -285,10 +291,11 @@ if isinstance(number, int):
         print(f"{number} x {i} = {result}")
 else:
     print("Please enter a valid integer.")
-
+```
  
-17. Print the Fibonacci Sequence
+### 17. Print the Fibonacci Sequence
 
+```
 # Prompt user for the number of terms in the Fibonacci sequence
 num_terms = int(input("Enter the number of terms in the Fibonacci sequence: "))
 
@@ -305,11 +312,11 @@ if isinstance(num_terms, int) and num_terms > 0:
     print(", ".join(map(str, fib_list)))
 else:
     print("Please enter a valid positive integer for the number of terms.")
+```
 
+### 18. Check Armstrong Number
 
- 
-18. Check Armstrong Number
-
+```
 # Prompt user for a number
 number = int(input("Enter a number: "))
 
@@ -332,9 +339,11 @@ if isinstance(number, int) and number > 0:
         print(f"{number} is not an Armstrong number.")
 else:
     print("Please enter a valid positive integer.")
+```
  
-19. Find Armstrong Number in an Interval
+### 19. Find Armstrong Number in an Interval
 
+```
 # Prompt user for the interval
 start_number = int(input("Enter the starting number of the interval: "))
 end_number = int(input("Enter the ending number of the interval: "))
@@ -364,11 +373,12 @@ if (
         if sum_of_digits == i:
             print(i)
 else:
-    print(
-        "Please enter valid positive integers, ensuring that the starting number is less than the ending number and both are greater than 0."
-    )
+    print("Please enter valid positive integers, ensuring that the starting number is less than the ending number and both are greater than 0.")
+```
 
-20. Make a Simple Calculator
+### 20. Make a Simple Calculator
+
+```
 # Prompt user for two numbers
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
@@ -401,10 +411,11 @@ if not (math.isnan(num1) or math.isnan(num2)):
         print(f"Result of {num1} {operation} {num2} is: {result}")
 else:
     print("Please enter valid numbers.")
-
+```
  
-21. Find the Sum of Natural Numbers
+### 21. Find the Sum of Natural Numbers
 
+```
 # Prompt user for a positive integer
 n = int(input("Enter a positive integer: "))
 
@@ -415,10 +426,11 @@ if isinstance(n, int) and n > 0:
     print(f"The sum of natural numbers from 1 to {n} is: {sum_of_natural_numbers}")
 else:
     print("Please enter a valid positive integer.")
-
+```
  
-22. Check if the Numbers Have the Same Last Digit
+### 22. Check if the Numbers Have the Same Last Digit
 
+```
 # Prompt user for two numbers
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
@@ -436,14 +448,11 @@ if isinstance(num1, int) and isinstance(num2, int):
         print(f"The last digit of {num1} is different from the last digit of {num2}.")
 else:
     print("Please enter valid integers.")
+```
 
+### 23. Find HCF or GCD
 
-
-
-
- 
-23. Find HCF or GCD
-
+```
 # Prompt user for two positive integers
 num1 = int(input("Enter the first positive integer: "))
 num2 = int(input("Enter the second positive integer: "))
@@ -461,25 +470,11 @@ if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
     print(f"The HCF (GCD) of {num1} and {num2} is: {hcf}")
 else:
     print("Please enter valid positive integers.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
  
-24. Find LCM
+### 24. Find LCM
 
+```
 # Prompt user for two positive integers
 num1 = int(input("Enter the first positive integer: "))
 num2 = int(input("Enter the second positive integer: "))
@@ -497,9 +492,9 @@ if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
         lcm += larger_number
 else:
     print("Please enter valid positive integers.")
-
+```
  
-25. Find the Factors of a Number
+### 25. Find the Factors of a Number
 
 # Prompt user for a positive integer
 number = int(input("Enter a positive integer: "))
@@ -515,8 +510,9 @@ if isinstance(number, int) and number > 0:
 else:
     print("Please enter a valid positive integer.")
  
-26. Find Sum of Natural Numbers Using Recursion
+### 26. Find the Sum of Natural Numbers Using Recursion
 
+```
 # Define a recursive function to calculate the sum of natural numbers
 def sum_of_natural_numbers(n):
     if n == 1:
@@ -534,15 +530,11 @@ if isinstance(number, int) and number > 0:
     print(f"The sum of natural numbers up to {number} is: {sum_result}")
 else:
     print("Please enter a valid positive integer.")
+```
 
+### 27. Guess a Random Number
 
-
-
-
-
- 
-27. Guess a Random Number
-
+```
 import random
 
 # Generate a random number between 1 and 100
@@ -571,14 +563,11 @@ while user_guess != random_number:
             print(f"Congratulations! You guessed the correct number {random_number} in {attempts} attempts.")
     else:
         print("Please enter a valid number.")
-
-
-
-
-
+```
  
-28. Shuffle Deck of Cards
+### 28. Shuffle Deck of Cards
 
+```
 import random
 
 # Function to create a standard deck of cards
@@ -608,10 +597,11 @@ shuffled_deck = initial_deck.copy()  # Create a copy to avoid modifying the orig
 shuffle_deck(shuffled_deck)
 print("\nShuffled Deck:")
 print(shuffled_deck)
-
+```
  
-29. Display Fibonacci Sequence Using Recursion
+### 29. Display Fibonacci Sequence Using Recursion
 
+```
 # Function to generate the Fibonacci sequence using recursion
 def fibonacci(n):
     if n <= 1:
@@ -631,10 +621,11 @@ if isinstance(num_terms, int) and num_terms >= 0:
         print(fibonacci(i))
 else:
     print("Please enter a valid non-negative integer for the number of terms.")
-
+```
  
-30. Find Factorial of Number Using Recursion
+### 30. Find Factorial of Number Using Recursion
 
+```
 # Function to calculate the factorial using recursion
 def factorial(n):
     if n == 0 or n == 1:
@@ -652,23 +643,11 @@ if isinstance(number, int) and number >= 0:
     print(f"The factorial of {number} is: {result}")
 else:
     print("Please enter a valid non-negative integer.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
  
-31. Convert Decimal to Binary
+### 31. Convert Decimal to Binary
 
+```
 # Function to convert decimal to binary
 def decimal_to_binary(decimal_number):
     if decimal_number == 0:
@@ -692,9 +671,11 @@ if isinstance(decimal_number, int) and decimal_number >= 0:
     print(f"The binary equivalent of {decimal_number} is: {binary_equivalent}")
 else:
     print("Please enter a valid non-negative integer.")
+```
  
-32. Find ASCII Value of Character
+### 32. Find ASCII Value of Character
 
+```
 # Prompt user for a character
 character = input("Enter a character: ")
 
@@ -705,9 +686,11 @@ if len(character) == 1:
     print(f"The ASCII value of '{character}' is: {ascii_value}")
 else:
     print("Please enter a valid single character.")
+```
  
-33. Check Whether a String is Palindrome or Not
+### 33. Check Whether a String is Palindrome or Not
 
+```
 # Function to check if a string is a palindrome
 def is_palindrome(s):
     # Remove non-alphanumeric characters and convert to lowercase
@@ -728,11 +711,11 @@ if len(input_string) > 0:
         print(f'"{input_string}" is not a palindrome.')
 else:
     print("Please enter a valid string.")
-
-
+```
  
-34. Sort Words in Alphabetical Order
+### 34. Sort Words in Alphabetical Order
 
+```
 # Prompt user for a sentence or a list of words
 input_string = input("Enter a sentence or a list of words: ")
 
@@ -749,9 +732,8 @@ if len(input_string) > 0:
     print(", ".join(sorted_words))
 else:
     print("Please enter a valid string.")
+```
 
-
- 
 35. Replace Characters of a String
 
 # Prompt user for a string
