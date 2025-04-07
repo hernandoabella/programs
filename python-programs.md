@@ -447,7 +447,7 @@ else:
     print("Please enter valid positive integers.")
 ```
 ### 25. Find the Factors of a Number
-
+```
 # Prompt user for a positive integer
 number = int(input("Enter a positive integer: "))
 
@@ -668,9 +668,8 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
-
-35. Replace Characters of a String
-
+### 35. Replace Characters of a String
+```
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -691,10 +690,9 @@ if len(input_string) > 0:
         print("Please enter a valid target character (single character).")
 else:
     print("Please enter a valid string.")
-
- 
-36. Reverse a String
-
+```
+### 36. Reverse a String
+```
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -707,12 +705,9 @@ if len(input_string) > 0:
     print(f"Reversed String: {reversed_string}")
 else:
     print("Please enter a valid string.")
-
-
-
- 
-37. Check the Number of Occurrences of a Character in the String
-
+```
+### 37. Check the Number of Occurrences of a Character in the String
+```
 # Prompt user for a string and a character
 input_string = input("Enter a string: ")
 target_char = input("Enter the character to count: ")
@@ -726,9 +721,9 @@ if len(input_string) > 0 and len(target_char) == 1:
     print(f"Number of occurrences of '{target_char}' in '{input_string}': {count}")
 else:
     print("Please enter a valid string and a single character.")
- 
-38. Convert the First Letter of a String into UpperCase
-
+``` 
+### 38. Convert the First Letter of a String into UpperCase
+```
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -742,11 +737,9 @@ if len(input_string) > 0:
     print(f"String with First Letter Uppercase: {result_string}")
 else:
     print("Please enter a valid string.")
-
-
- 
-39. Count the Number of Vowels in a String
-
+```
+### 39. Count the Number of Vowels in a String
+```
 # Function to count vowels in a string
 def count_vowels(string):
     vowels = "aeiouAEIOU"
@@ -768,11 +761,9 @@ if len(input_string) > 0:
     print(f"Number of vowels in '{input_string}': {number_of_vowels}")
 else:
     print("Please enter a valid string.")
-
-
- 
-40. Check Whether a String Starts and Ends With Certain Characters
-
+```
+### 40. Check Whether a String Starts and Ends With Certain Characters
+```
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -789,8 +780,8 @@ if len(input_string) > 0:
         print(f"The string '{input_string}' does not start with '{start_char}' or does not end with '{end_char}'.")
 else:
     print("Please enter a valid string.")
- 
-41. Replace All Occurrences of a String
+```
+### 41. Replace All Occurrences of a String
 # Example string
 original_string = "Hello world, world!"
 
