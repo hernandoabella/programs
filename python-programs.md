@@ -1,105 +1,127 @@
 # Python Programs for Beginners
- 
+
 ### 1. Print Hello World
-<img src="https://github.com/user-attachments/assets/4c9802c6-16dc-42e9-a723-aa12f39e4d22" width="300px"/>
-
-```
+Prints a friendly greeting — the classic first step in any programming language.
+```python
 print("Hello, World!")
+
+# Output:
+# Hello, World!
 ```
+
 ### 2. Add Two Numbers
-<img src="https://github.com/user-attachments/assets/df4954cd-f420-4417-b60b-facce39e7d65" width="500px"/>
+Takes two numbers from the user and calculates their sum.
+```python
+num1 = float(input("Enter the first number: "))  # e.g. 4
+num2 = float(input("Enter the second number: ")) # e.g. 6
 
-```
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+sum_result = num1 + num2
+print(f"The sum of {num1} and {num2} is: {sum_result}")
 
-if not (num1.is_nan() or num2.is_nan()):
-    sum_result = num1 + num2
-    print(f"The sum of {num1} and {num2} is: {sum_result}")
-else:
-    print("Please enter valid numbers.")
+# Output:
+# Enter the first number: 4
+# Enter the second number: 6
+# The sum of 4.0 and 6.0 is: 10.0
 ```
+
 ### 3. Find the Square Root
-```
+Calculates the square root of a given number using Python's math module.
+```python
 import math
 
-input_number = float(input("Enter a non-negative number: "))
+input_number = float(input("Enter a non-negative number: "))  # e.g. 25
 
-if not (math.isnan(input_number) or input_number < 0):
+if input_number >= 0:
     square_root = math.sqrt(input_number)
     print(f"The square root of {input_number} is: {square_root}")
 else:
     print("Please enter a valid non-negative number.")
-```
-### 4. Calculate the Area of a Triangle
-```
-base = float(input("Enter the base of the triangle: "))
-height = float(input("Enter the height of the triangle: "))
 
-if not (math.isnan(base) or math.isnan(height) or base <= 0 or height <= 0):
-    area = 0.5 * base * height
-    print(f"The area of the triangle with base {base} and height {height} is: {area}")
-else:
-    print("Please enter valid positive numbers for base and height.")
+# Output:
+# Enter a non-negative number: 25
+# The square root of 25.0 is: 5.0
 ```
+
+### 4. Calculate the Area of a Triangle
+**Uses the formula:** ½ × base × height to find the area.
+```python
+base = float(input("Enter the base of the triangle: "))     # e.g. 10
+height = float(input("Enter the height of the triangle: ")) # e.g. 5
+
+area = 0.5 * base * height
+print(f"The area of the triangle with base {base} and height {height} is: {area}")
+
+# Output:
+# Enter the base of the triangle: 10
+# Enter the height of the triangle: 5
+# The area of the triangle with base 10.0 and height 5.0 is: 25.0
+```
+
 ### 5. Swap Two Variables
-```
-variable1 = input("Enter the first variable: ")
-variable2 = input("Enter the second variable: ")
+Exchanges the values of two variables using Python’s elegant syntax.
+```python
+variable1 = input("Enter the first variable: ")  # e.g. Apple
+variable2 = input("Enter the second variable: ") # e.g. Banana
 
 print(f"Before swapping: Variable1 = {variable1}, Variable2 = {variable2}")
 
-# Swapping the variables
-temp = variable1
-variable1 = variable2
-variable2 = temp
+# Swapping
+variable1, variable2 = variable2, variable1
 
 print(f"After swapping: Variable1 = {variable1}, Variable2 = {variable2}")
+
+# Output:
+# Enter the first variable: Apple
+# Enter the second variable: Banana
+# Before swapping: Variable1 = Apple, Variable2 = Banana
+# After swapping: Variable1 = Banana, Variable2 = Apple
 ```
-### 6. Solve Quadratic Equation
-```
+
+### 6. Solve a Quadratic Equation
+Solves equations of the form ax² + bx + c = 0.
+```python
 import math
 
-# Prompt user for coefficients
-a = float(input("Enter the coefficient a: "))
-b = float(input("Enter the coefficient b: "))
-c = float(input("Enter the coefficient c: "))
+a = float(input("Enter the coefficient a: "))  # e.g. 1
+b = float(input("Enter the coefficient b: "))  # e.g. -3
+c = float(input("Enter the coefficient c: "))  # e.g. 2
 
-# Calculate the discriminant
-discriminant = b ** 2 - 4 * a * c
+discriminant = b**2 - 4*a*c
 
-# Check if roots are real
-if not (math.isnan(a) or math.isnan(b) or math.isnan(c)):
-    if discriminant > 0:
-        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
-        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
-        print(f"The roots of the quadratic equation are: {root1} and {root2}")
-    elif discriminant == 0:
-        root = -b / (2 * a)
-        print(f"The quadratic equation has a repeated root: {root}")
-    else:
-        print("The quadratic equation has complex roots.")
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"The roots are: {root1} and {root2}")
+elif discriminant == 0:
+    root = -b / (2*a)
+    print(f"The equation has one root: {root}")
 else:
-    print("Please enter valid numbers for coefficients.")
+    print("The equation has complex roots.")
+
+# Output:
+# Enter the coefficient a: 1
+# Enter the coefficient b: -3
+# Enter the coefficient c: 2
+# The roots are: 2.0 and 1.0
 ```
+
 ### 7. Convert Kilometers to Miles
-```
-# Prompt user for distance in kilometers
-kilometers = float(input("Enter the distance in kilometers: "))
+Converts a distance from kilometers to miles using a standard conversion factor.
+```python
+kilometers = float(input("Enter the distance in kilometers: "))  # e.g. 10
+conversion_factor = 0.621371
+miles = kilometers * conversion_factor
 
-# Conversion factor
-kilometers_to_miles_conversion_factor = 0.621371
+print(f"{kilometers} kilometers is approximately {miles} miles.")
 
-# Check if input is a valid number
-if not math.isnan(kilometers):
-    # Convert kilometers to miles
-    miles = kilometers * kilometers_to_miles_conversion_factor
-    print(f"{kilometers} kilometers is approximately {miles} miles.")
-else:
-    print("Please enter a valid number for the distance in kilometers.")
+# Output:
+# Enter the distance in kilometers: 10
+# 10.0 kilometers is approximately 6.21371 miles.
 ```
+
 ### 8. Convert Celsius to Fahrenheit
-```
+Converts temperature from Celsius to Fahrenheit.
+```python
 # Prompt user for temperature in Celsius
 celsius = float(input("Enter the temperature in Celsius: "))
 
@@ -111,24 +133,30 @@ if not math.isnan(celsius):
 else:
     print("Please enter a valid number for the temperature in Celsius.")
 ```
+
 ### 9. Generate a Random Number
-```
+Randomly picks a number between two values. Great for simple games or simulations.
+```python
 import random
 
-# Prompt user for the range
-min_range = float(input("Enter the minimum value of the range: "))
-max_range = float(input("Enter the maximum value of the range: "))
+min_range = float(input("Enter the minimum value: "))  # e.g. 1
+max_range = float(input("Enter the maximum value: "))  # e.g. 100
 
-# Check if input is a valid number
-if not (math.isnan(min_range) or math.isnan(max_range) or min_range >= max_range):
-    # Generate a random number within the specified range
+if min_range < max_range:
     random_number = random.uniform(min_range, max_range)
-    print(f"A random number between {min_range} and {max_range} is: {random_number}")
+    print(f"Random number between {min_range} and {max_range}: {random_number}")
 else:
-    print("Please enter valid numbers, ensuring that the minimum value is less than the maximum value.")
+    print("Minimum must be less than maximum!")
+
+# Output:
+# Enter the minimum value: 1
+# Enter the maximum value: 100
+# Random number between 1.0 and 100.0: 74.2391 (value may vary)
 ```
+
 ### 10. Check if a number is Positive, Negative, or Zero
-```
+A simple classifier that checks whether a number is positive, negative, or zero.
+```python
 # Prompt user for a number
 number = float(input("Enter a number: "))
 
@@ -144,8 +172,10 @@ if not math.isnan(number):
 else:
     print("Please enter a valid number.")
 ```
+
 ### 11. Check if a Number is Odd or Even
-```
+Tells you if a given number is even or odd.
+```python
 # Prompt user for a number
 number = input("Enter a number: ")
 
@@ -159,13 +189,21 @@ if number.isdigit():
         print(f"{number} is an odd number.")
 else:
     print("Please enter a valid integer.")
+
+# Output:
+# Enter a number: 7
+# 7 is an odd number.
 ```
+
 ### 12. Find the Largest Among Three Numbers
-```
+Compares three numbers and returns the largest.
+```python
+import math
+
 # Prompt user for three numbers
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-num3 = float(input("Enter the third number: "))
+num1 = float(input("Enter the first number: "))   # e.g. 10
+num2 = float(input("Enter the second number: "))  # e.g. 25
+num3 = float(input("Enter the third number: "))   # e.g. 15
 
 # Check if inputs are valid numbers
 if not (math.isnan(num1) or math.isnan(num2) or math.isnan(num3)):
@@ -174,11 +212,19 @@ if not (math.isnan(num1) or math.isnan(num2) or math.isnan(num3)):
     print(f"The largest number among {num1}, {num2}, and {num3} is: {largest_number}")
 else:
     print("Please enter valid numbers for all three inputs.")
+
+# Output:
+# Enter the first number: 10
+# Enter the second number: 25
+# Enter the third number: 15
+# The largest number among 10.0, 25.0, and 15.0 is: 25.0
 ```
-### 13. Check Prime Number
-```
+
+### 13. Check a Prime Number
+Determines whether the entered number is prime.
+```python
 # Prompt user for a number
-number = int(input("Enter a number: "))
+number = int(input("Enter a number: "))  # e.g. 17
 
 # Check if input is a valid integer greater than 1
 if number > 1:
@@ -197,12 +243,18 @@ if number > 1:
         print(f"{number} is not a prime number.")
 else:
     print("Please enter a valid integer greater than 1.")
+
+# Output:
+# Enter a number: 17
+# 17 is a prime number.
 ```
+
 ### 14. Print All Prime Numbers in an Interval
-```
+Prints all prime numbers between two given values.
+```python
 # Prompt user for the interval
-start_number = int(input("Enter the starting number of the interval: "))
-end_number = int(input("Enter the ending number of the interval: "))
+start_number = int(input("Enter the starting number of the interval: "))  # e.g. 10
+end_number = int(input("Enter the ending number of the interval: "))      # e.g. 20
 
 # Check if inputs are valid integers and the startNumber is less than the endNumber
 if (
@@ -217,7 +269,6 @@ if (
     for i in range(start_number, end_number + 1):
         is_prime = True
         
-        # Check for prime numbers
         for j in range(2, int(i ** 0.5) + 1):
             if i % j == 0:
                 is_prime = False
@@ -229,11 +280,22 @@ else:
     print(
         "Please enter valid integers, ensuring that the starting number is less than the ending number and greater than 1."
     )
+
+# Output:
+# Enter the starting number of the interval: 10
+# Enter the ending number of the interval: 20
+# Prime numbers in the interval [10, 20]:
+# 11
+# 13
+# 17
+# 19
 ```
+
 ### 15. Find the Factorial of a Number
-```
+Calculates the factorial of a given number using a loop.
+```python
 # Prompt user for a non-negative integer
-number = int(input("Enter a non-negative integer: "))
+number = int(input("Enter a non-negative integer: "))  # e.g. 5
 
 # Check if input is a valid non-negative integer
 if isinstance(number, int) and number >= 0:
@@ -245,46 +307,81 @@ if isinstance(number, int) and number >= 0:
     print(f"The factorial of {number} is: {factorial}")
 else:
     print("Please enter a valid non-negative integer.")
+
+# Output:
+# Enter a non-negative integer: 5
+# The factorial of 5 is: 120
 ```
+
 ### 16. Display the Multiplication Table
-```
+This program displays the multiplication table of a given number, up to 10.
+```python
 # Prompt user for a number
-number = int(input("Enter a number for the multiplication table: "))
+number = int(input("Enter a number for the multiplication table: "))  # Example: 5
 
 # Check if input is a valid integer
 if isinstance(number, int):
-    # Specify the range for the multiplication table
+    # Set range for the multiplication table (1 to 10)
     range_val = 10
 
     print(f"Multiplication table for {number} (up to {range_val}):")
 
-    # Display the multiplication table
+    # Loop through and display the multiplication table
     for i in range(1, range_val + 1):
         result = number * i
         print(f"{number} x {i} = {result}")
 else:
     print("Please enter a valid integer.")
-```
-### 17. Print the Fibonacci Sequence
-```
-# Prompt user for the number of terms in the Fibonacci sequence
-num_terms = int(input("Enter the number of terms in the Fibonacci sequence: "))
 
-# Check if input is a valid integer
+"""
+Sample Output:
+Enter a number for the multiplication table: 5
+Multiplication table for 5 (up to 10):
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+"""
+```
+
+### 17. Print the Fibonacci Sequence
+This program generates and displays the Fibonacci sequence up to a user-defined number of terms.
+```python
+# Prompt user for the number of terms in the Fibonacci sequence
+num_terms = int(input("Enter the number of terms in the Fibonacci sequence: "))  # Example: 7
+
+# Check if input is a valid integer and greater than 0
 if isinstance(num_terms, int) and num_terms > 0:
     print(f"Fibonacci sequence of {num_terms} terms:")
 
-    fib_list = [0, 1]
+    fib_list = [0, 1]  # Starting values of the Fibonacci sequence
 
     # Generate the Fibonacci sequence
     for i in range(2, num_terms):
         fib_list.append(fib_list[i - 1] + fib_list[i - 2])
 
+    # Print the sequence
     print(", ".join(map(str, fib_list)))
 else:
     print("Please enter a valid positive integer for the number of terms.")
+
+"""
+Sample Output:
+Enter the number of terms in the Fibonacci sequence: 7
+Fibonacci sequence of 7 terms:
+0, 1, 1, 2, 3, 5, 8
+"""
 ```
+
 ### 18. Check Armstrong Number
+This program checks if a given number is an Armstrong number.
+> **What's An Armstrong number?:** Is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
 ```
 # Prompt user for a number
 number = int(input("Enter a number: "))
@@ -309,13 +406,15 @@ if isinstance(number, int) and number > 0:
 else:
     print("Please enter a valid positive integer.")
 ```
-### 19. Find Armstrong Number in an Interval
-```
-# Prompt user for the interval
-start_number = int(input("Enter the starting number of the interval: "))
-end_number = int(input("Enter the ending number of the interval: "))
 
-# Check if inputs are valid positive integers and the startNumber is less than the endNumber
+### 19. Find Armstrong Number in an Interval
+This program finds and prints all Armstrong numbers within a user-defined range.
+```python
+# Get range input from user
+start_number = int(input("Enter the starting number of the interval: "))  # Example: 100
+end_number = int(input("Enter the ending number of the interval: "))      # Example: 999
+
+# Validate the input
 if (
     isinstance(start_number, int)
     and isinstance(end_number, int)
@@ -324,13 +423,13 @@ if (
 ):
     print(f"Armstrong numbers in the interval [{start_number}, {end_number}]:")
     
-    # Check for Armstrong numbers in the interval
+    # Loop through the interval
     for i in range(start_number, end_number + 1):
         original_number = i
         number_of_digits = len(str(original_number))
         sum_of_digits = 0
 
-        # Calculate the sum of digits each raised to the power of the number of digits
+        # Compute sum of digits raised to the power of the number of digits
         while original_number > 0:
             digit = original_number % 10
             sum_of_digits += digit ** number_of_digits
@@ -340,10 +439,25 @@ if (
         if sum_of_digits == i:
             print(i)
 else:
-    print("Please enter valid positive integers, ensuring that the starting number is less than the ending number and both are greater than 0.")
+    print("Please enter valid positive integers with start < end.")
+
+"""
+Sample Output:
+Enter the starting number of the interval: 100
+Enter the ending number of the interval: 999
+Armstrong numbers in the interval [100, 999]:
+153
+370
+371
+407
+"""
 ```
+
 ### 20. Make a Simple Calculator
-```
+A basic calculator that performs addition, subtraction, multiplication, or division based on user input.
+```python
+import math
+
 # Prompt user for two numbers
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
@@ -376,25 +490,45 @@ if not (math.isnan(num1) or math.isnan(num2)):
         print(f"Result of {num1} {operation} {num2} is: {result}")
 else:
     print("Please enter valid numbers.")
+
+# ------------------------
+# Example Output:
+# Enter the first number: 10
+# Enter the second number: 5
+# Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division): *
+# Result of 10.0 * 5.0 is: 50.0
 ```
+
 ### 21. Find the Sum of Natural Numbers
-```
+This program calculates the sum of natural numbers from 1 to a given positive integer n using the formula:
+
+![image](https://github.com/user-attachments/assets/69a0be9e-4507-4ba3-b485-2998fdb3d90c)
+
+```python
 # Prompt user for a positive integer
-n = int(input("Enter a positive integer: "))
+n = int(input("Enter a positive integer: "))  # Example: 5
 
 # Check if input is a valid positive integer
 if isinstance(n, int) and n > 0:
     # Calculate the sum of natural numbers
     sum_of_natural_numbers = (n * (n + 1)) // 2
-    print(f"The sum of natural numbers from 1 to {n} is: {sum_of_natural_numbers}")
+    print(f"The sum of natural numbers from 1 to {n} is: {sum_of_natural_numbers}")  # Example Output: The sum of natural numbers from 1 to 5 is: 15
 else:
     print("Please enter a valid positive integer.")
+
+"""
+Sample Output:
+Enter a positive integer: 5
+The sum of natural numbers from 1 to 5 is: 15
+"""
 ```
+
 ### 22. Check if the Numbers Have the Same Last Digit
-```
+This program checks whether two given numbers have the same last digit. It extracts the last digit of each number and compares it.
+```python
 # Prompt user for two numbers
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
+num1 = int(input("Enter the first number: "))  # Example: 123
+num2 = int(input("Enter the second number: "))  # Example: 43
 
 # Check if inputs are valid integers
 if isinstance(num1, int) and isinstance(num2, int):
@@ -404,34 +538,52 @@ if isinstance(num1, int) and isinstance(num2, int):
 
     # Check if the last digits are the same
     if last_digit_1 == last_digit_2:
-        print(f"The last digit of {num1} is the same as the last digit of {num2}.")
+        print(f"The last digit of {num1} is the same as the last digit of {num2}.")  # Example Output: The last digit of 123 is the same as the last digit of 43.
     else:
-        print(f"The last digit of {num1} is different from the last digit of {num2}.")
+        print(f"The last digit of {num1} is different from the last digit of {num2}.")  # Example Output: The last digit of 123 is different from the last digit of 43.
 else:
     print("Please enter valid integers.")
+
+"""
+Sample Output:
+Enter the first number: 123
+Enter the second number: 43
+The last digit of 123 is the same as the last digit of 43.
+"""
 ```
+
 ### 23. Find HCF or GCD
-```
+This program calculates the Highest Common Factor (HCF) or Greatest Common Divisor (GCD) of two positive integers using a basic approach by checking divisors of both numbers.
+```python
 # Prompt user for two positive integers
-num1 = int(input("Enter the first positive integer: "))
-num2 = int(input("Enter the second positive integer: "))
+num1 = int(input("Enter the first positive integer: "))  # Example: 36
+num2 = int(input("Enter the second positive integer: "))  # Example: 60
 
 # Check if inputs are valid positive integers
 if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
     # Find the HCF or GCD
-    smaller_number = min(num1, num2)
-    hcf = 1
+    smaller_number = min(num1, num2)  # Find the smaller number for iteration
+    hcf = 1  # Start with 1 as the HCF
 
+    # Check divisibility to find the HCF
     for i in range(1, smaller_number + 1):
         if num1 % i == 0 and num2 % i == 0:
-            hcf = i
+            hcf = i  # Update HCF if divisible by both numbers
 
-    print(f"The HCF (GCD) of {num1} and {num2} is: {hcf}")
+    print(f"The HCF (GCD) of {num1} and {num2} is: {hcf}")  # Output the result
 else:
     print("Please enter valid positive integers.")
+
+"""
+Sample Output:
+Enter the first positive integer: 36
+Enter the second positive integer: 60
+The HCF (GCD) of 36 and 60 is: 12
+"""
 ```
+
 ### 24. Find LCM
-```
+```python
 # Prompt user for two positive integers
 num1 = int(input("Enter the first positive integer: "))
 num2 = int(input("Enter the second positive integer: "))
@@ -450,8 +602,9 @@ if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
 else:
     print("Please enter valid positive integers.")
 ```
+
 ### 25. Find the Factors of a Number
-```
+```python
 # Prompt user for a positive integer
 number = int(input("Enter a positive integer: "))
 
@@ -466,8 +619,9 @@ if isinstance(number, int) and number > 0:
 else:
     print("Please enter a valid positive integer.")
 ```
+
 ### 26. Find the Sum of Natural Numbers Using Recursion
-```
+```python
 # Define a recursive function to calculate the sum of natural numbers
 def sum_of_natural_numbers(n):
     if n == 1:
@@ -486,8 +640,9 @@ if isinstance(number, int) and number > 0:
 else:
     print("Please enter a valid positive integer.")
 ```
+
 ### 27. Guess a Random Number
-```
+```python
 import random
 
 # Generate a random number between 1 and 100
@@ -517,8 +672,9 @@ while user_guess != random_number:
     else:
         print("Please enter a valid number.")
 ```
+
 ### 28. Shuffle Deck of Cards
-```
+```python
 import random
 
 # Function to create a standard deck of cards
@@ -549,8 +705,9 @@ shuffle_deck(shuffled_deck)
 print("\nShuffled Deck:")
 print(shuffled_deck)
 ```
+
 ### 29. Display Fibonacci Sequence Using Recursion
-```
+```python
 # Function to generate the Fibonacci sequence using recursion
 def fibonacci(n):
     if n <= 1:
@@ -571,8 +728,9 @@ if isinstance(num_terms, int) and num_terms >= 0:
 else:
     print("Please enter a valid non-negative integer for the number of terms.")
 ```
+
 ### 30. Find Factorial of Number Using Recursion
-```
+```python
 # Function to calculate the factorial using recursion
 def factorial(n):
     if n == 0 or n == 1:
@@ -591,8 +749,9 @@ if isinstance(number, int) and number >= 0:
 else:
     print("Please enter a valid non-negative integer.")
 ```
+
 ### 31. Convert Decimal to Binary
-```
+```python
 # Function to convert decimal to binary
 def decimal_to_binary(decimal_number):
     if decimal_number == 0:
@@ -617,8 +776,8 @@ if isinstance(decimal_number, int) and decimal_number >= 0:
 else:
     print("Please enter a valid non-negative integer.")
 ``` 
-### 32. Find ASCII Value of Character
-```
+### 32. Find the ASCII Value of a Character
+```python
 # Prompt user for a character
 character = input("Enter a character: ")
 
@@ -630,8 +789,9 @@ if len(character) == 1:
 else:
     print("Please enter a valid single character.")
 ```
+
 ### 33. Check Whether a String is Palindrome or Not
-```
+```python
 # Function to check if a string is a palindrome
 def is_palindrome(s):
     # Remove non-alphanumeric characters and convert to lowercase
@@ -653,8 +813,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 34. Sort Words in Alphabetical Order
-```
+```python
 # Prompt user for a sentence or a list of words
 input_string = input("Enter a sentence or a list of words: ")
 
@@ -672,8 +833,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 35. Replace Characters of a String
-```
+```python
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -695,8 +857,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 36. Reverse a String
-```
+```python
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -709,9 +872,10 @@ if len(input_string) > 0:
     print(f"Reversed String: {reversed_string}")
 else:
     print("Please enter a valid string.")
-```
+```python
+
 ### 37. Check the Number of Occurrences of a Character in the String
-```
+```python
 # Prompt user for a string and a character
 input_string = input("Enter a string: ")
 target_char = input("Enter the character to count: ")
@@ -725,9 +889,10 @@ if len(input_string) > 0 and len(target_char) == 1:
     print(f"Number of occurrences of '{target_char}' in '{input_string}': {count}")
 else:
     print("Please enter a valid string and a single character.")
-``` 
-### 38. Convert the First Letter of a String into UpperCase
 ```
+
+### 38. Convert the First Letter of a String into UpperCase
+```python
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -742,8 +907,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 39. Count the Number of Vowels in a String
-```
+```python
 # Function to count vowels in a string
 def count_vowels(string):
     vowels = "aeiouAEIOU"
@@ -766,8 +932,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 40. Check Whether a String Starts and Ends With Certain Characters
-```
+```python
 # Prompt user for a string
 input_string = input("Enter a string: ")
 
@@ -785,7 +952,9 @@ if len(input_string) > 0:
 else:
     print("Please enter a valid string.")
 ```
+
 ### 41. Replace All Occurrences of a String
+```python
 # Example string
 original_string = "Hello world, world!"
 
@@ -801,11 +970,10 @@ modified_string = original_string.replace(search_string, replacement_string)
 # Display the result
 print(f"Original String: {original_string}")
 print(f"Modified String: {modified_string}")
+```
 
-
- 
-42. Create Multiline Strings
-
+### 42. Create Multiline Strings
+```python
 # Multiline string using triple quotes
 multiline_string = '''
     This is a multiline string.
@@ -814,12 +982,10 @@ multiline_string = '''
 '''
 
 print(multiline_string)
+```
 
-
-
- 
-43. Format Numbers as Currency Strings
-
+### 43. Format Numbers as Currency Strings
+```python
 import locale
 
 # Set the locale to United States
@@ -833,10 +999,10 @@ formatted_amount = locale.currency(amount, grouping=True)
 
 # Display the formatted currency string
 print(f"Formatted Amount: {formatted_amount}")
+```
 
- 
-44. Generate Random String
-
+### 44. Generate Random String
+```python
 import random
 import string
 
@@ -850,10 +1016,10 @@ random_string = generate_random_string(8)
 
 # Display the random string
 print(f"Random String: {random_string}")
+```
 
- 
-45. Check if a String Starts with Another String
-
+### 45. Check if a String Starts with Another String
+```python
 # Example strings
 main_string = "Hello, World!"
 search_string = "Hello"
@@ -863,9 +1029,10 @@ starts_with = main_string.startswith(search_string)
 
 # Display the result
 print(f"Does the string start with '{search_string}'? {starts_with}")
- 
-46. Trim a String
+```
 
+### 46. Trim a String
+```python
 # Example string with leading and trailing whitespaces
 string_with_spaces = "   Hello, World!   "
 
@@ -875,9 +1042,10 @@ trimmed_string = string_with_spaces.strip()
 # Display the result
 print(f"Original String: '{string_with_spaces}'")
 print(f"Trimmed String: '{trimmed_string}'")
- 
-47. Check Whether a String Contains a Substring
+```
 
+### 47. Check Whether a String Contains a Substring
+```python
 # Example string
 main_string = "Hello, World!"
 substring_to_check = "World"
@@ -887,11 +1055,9 @@ contains_substring = substring_to_check in main_string
 
 # Display the result
 print(f"Does the string contain '{substring_to_check}'? {contains_substring}")
+```
 
-
-
- 
-48. Compare Two Strings
+### 48. Compare Two Strings
 # Example strings
 string1 = "Hello"
 string2 = "hello"
@@ -905,16 +1071,9 @@ case_insensitive_comparison = string1.lower() == string2.lower()
 # Display the results
 print(f"Case-sensitive comparison: {case_sensitive_comparison}")
 print(f"Case-insensitive comparison: {case_insensitive_comparison}")
-
-
-
-
-
-
-
  
-49. Encode a String to Base64
-
+### 49. Encode a String to Base64
+```python
 import base64
 
 # Original string
@@ -926,12 +1085,10 @@ base64_encoded_string = base64.b64encode(original_string.encode('utf-8')).decode
 # Display the result
 print(f"Original String: {original_string}")
 print(f"Base64 Encoded String: {base64_encoded_string}")
+```
 
-
-
- 
-50. Replace all Instances of a Character in a String
-
+### 50. Replace all Instances of a Character in a String
+```python
 # Example string
 original_string = "Hello, World!"
 
@@ -947,7 +1104,7 @@ modified_string = original_string.replace(char_to_replace, replacement_char)
 # Display the result
 print(f"Original String: {original_string}")
 print(f"Modified String: {modified_string}")
-
+```
  
 51. Replace All Line Breaks with
 
