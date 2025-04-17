@@ -1,10 +1,14 @@
 # Python Programs for Beginners
  
 ### 1. Print Hello World
+<img src="https://github.com/user-attachments/assets/4c9802c6-16dc-42e9-a723-aa12f39e4d22" width="300px"/>
+
 ```
 print("Hello, World!")
 ```
 ### 2. Add Two Numbers
+<img src="https://github.com/user-attachments/assets/df4954cd-f420-4417-b60b-facce39e7d65" width="500px"/>
+
 ```
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
