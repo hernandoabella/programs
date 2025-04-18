@@ -1,4 +1,4 @@
-![GitHub Banners](https://github.com/user-attachments/assets/81252eab-d54f-40ef-9d43-84ca814dc20c)
+![GitHub Banners (19)](https://github.com/user-attachments/assets/e660ebe4-f737-4e15-9856-4cf28f9b52c6)
 
 ## Select your weapon 🗡️:
 - [Python](./python-programs.md)
