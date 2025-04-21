@@ -1,7 +1,5 @@
-# 200+ Rust Programs for Beginners
+![GitHub Banners (24)](https://github.com/user-attachments/assets/f6352a8a-8a89-44eb-8a8e-2e7ea1de4dc5)
 
-## Introduction
-This is an essential tool for any beginner who wants to master Rust quickly and effectively. Featuring over 200 practicals, easy-to-follow programs, this book will guide you step-by-step from the basics to more complex projects.
 
 ### 1. Print Hello World
 
