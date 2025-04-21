@@ -1,4 +1,4 @@
-![GitHub Banners (22)](https://github.com/user-attachments/assets/7a0dd9dc-df14-4e31-b89f-991c2062dfe2)
+![5](https://github.com/user-attachments/assets/864cd1b1-2ecb-4020-a533-6598e0f1d133)
 
 1. Print Hello World
 The "Hello World" program is a classic in programming and is often the first program written when learning a new programming language. In this case, the goal is to print the text string "Hello, World!" to the browser console.
