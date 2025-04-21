@@ -1,4 +1,4 @@
-![GitHub Banners (23)](https://github.com/user-attachments/assets/e3013e85-1dbf-4370-924b-c39a4928ecbf)
+![8](https://github.com/user-attachments/assets/f61b988d-31dd-4c68-8631-af1bd6883c42)
 
 1. Print Hello World
 public class Main {
