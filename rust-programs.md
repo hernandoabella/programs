@@ -1,5 +1,4 @@
-![GitHub Banners (24)](https://github.com/user-attachments/assets/f6352a8a-8a89-44eb-8a8e-2e7ea1de4dc5)
-
+![6](https://github.com/user-attachments/assets/40d5ef91-02b7-4408-809c-85d6d70541cc)
 
 ### 1. Print Hello World
 
