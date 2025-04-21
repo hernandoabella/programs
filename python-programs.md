@@ -256,7 +256,7 @@ Prints all prime numbers between two given values.
 start_number = int(input("Enter the starting number of the interval: "))  # e.g. 10
 end_number = int(input("Enter the ending number of the interval: "))      # e.g. 20
 
-# Check if inputs are valid integers and the startNumber is less than the endNumber
+# Check if the inputs are valid integers and the startNumber is less than the endNumber
 if (
     isinstance(start_number, int)
     and isinstance(end_number, int)
@@ -381,10 +381,10 @@ Fibonacci sequence of 7 terms:
 
 ### 18. Check Armstrong Number
 This program checks if a given number is an Armstrong number.
-> **What's An Armstrong number?:** Is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
-```
+> **What's an Armstrong number?** Is a number equal to the sum of its digits, each raised to the power of the number of digits.
+```python
 # Prompt user for a number
-number = int(input("Enter a number: "))
+number = int(input("Enter a number: "))  # Example: 153
 
 # Check if input is a valid positive integer
 if isinstance(number, int) and number > 0:
@@ -392,22 +392,28 @@ if isinstance(number, int) and number > 0:
     number_of_digits = len(str(original_number))
     sum_of_digits = 0
 
-    # Calculate the sum of digits each raised to the power of the number of digits
+    # Calculate the sum of digits, each raised to the power of the number of digits
     while original_number > 0:
         digit = original_number % 10
         sum_of_digits += digit ** number_of_digits
         original_number //= 10
 
-    # Check if the number is an Armstrong number
+    # Compare sum with the original number
     if sum_of_digits == number:
         print(f"{number} is an Armstrong number.")
     else:
         print(f"{number} is not an Armstrong number.")
 else:
     print("Please enter a valid positive integer.")
+
+"""
+Sample Output:
+Enter a number: 153
+153 is an Armstrong number.
+"""
 ```
 
-### 19. Find Armstrong Number in an Interval
+### 19. Find an Armstrong Number in an Interval
 This program finds and prints all Armstrong numbers within a user-defined range.
 ```python
 # Get range input from user
@@ -429,7 +435,7 @@ if (
         number_of_digits = len(str(original_number))
         sum_of_digits = 0
 
-        # Compute sum of digits raised to the power of the number of digits
+        # Compute the sum of digits raised to the power of the number of digits
         while original_number > 0:
             digit = original_number % 10
             sum_of_digits += digit ** number_of_digits
