@@ -2,6 +2,7 @@
 This is a mega collection of simple programs in various programming languages, designed to help beginners learn and practice coding.
 
 ## Select your weapon 🗡️:
+- [R](./r-programs.md)
 - [Python](./python-programs.md)
 - [JavaScript](./javascript-programs.md)
 - [Java](./java-programs.md)
