@@ -6,6 +6,7 @@ This is a mega collection of simple programs in various programming languages, d
 - [Python](./python-programs.md)
 - [JavaScript](./javascript-programs.md)
 - [Java](./java-programs.md)
+- [Go](#)
 - [C](./c-programs.md)
 - [Rust](rust-programs.md)
 
