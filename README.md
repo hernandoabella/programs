@@ -8,6 +8,8 @@ This is a mega collection of simple programs in various programming languages, d
 - [Java](./java-programs.md)
 - [Go](#)
 - [C](./c-programs.md)
+- [C++](#)
+- [C#](#)
 - [Rust](rust-programs.md)
 
 Made with a lot of ❤️ By Hernando Abella
