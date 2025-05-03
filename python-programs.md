@@ -589,10 +589,12 @@ The HCF (GCD) of 36 and 60 is: 12
 ```
 
 ### 24. Find LCM
+This program calculates the LCM (Least Common Multiple) of two positive integers using a simple loop that checks for the smallest common multiple.
+
 ```python
 # Prompt user for two positive integers
-num1 = int(input("Enter the first positive integer: "))
-num2 = int(input("Enter the second positive integer: "))
+num1 = int(input("Enter the first positive integer: "))  # e.g., 4
+num2 = int(input("Enter the second positive integer: ")) # e.g., 6
 
 # Check if inputs are valid positive integers
 if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
@@ -607,26 +609,43 @@ if isinstance(num1, int) and isinstance(num2, int) and num1 > 0 and num2 > 0:
         lcm += larger_number
 else:
     print("Please enter valid positive integers.")
+
+# --- Sample Output (for input 4 and 6) ---
+# Enter the first positive integer: 4
+# Enter the second positive integer: 6
+# The LCM of 4 and 6 is: 12
 ```
 
 ### 25. Find the Factors of a Number
+This program finds and displays all the factors of a positive integer.
 ```python
 # Prompt user for a positive integer
-number = int(input("Enter a positive integer: "))
+number = int(input("Enter a positive integer: "))  # e.g., 12
 
 # Check if input is a valid positive integer
 if isinstance(number, int) and number > 0:
     print(f"Factors of {number}:")
-
+    
     # Find and display the factors
     for i in range(1, number + 1):
         if number % i == 0:
             print(i)
 else:
     print("Please enter a valid positive integer.")
+
+# --- Sample Output (for input 12) ---
+# Enter a positive integer: 12
+# Factors of 12:
+# 1
+# 2
+# 3
+# 4
+# 6
+# 12
 ```
 
 ### 26. Find the Sum of Natural Numbers Using Recursion
+This program uses recursion to find the sum of natural numbers up to a given positive integer.
 ```python
 # Define a recursive function to calculate the sum of natural numbers
 def sum_of_natural_numbers(n):
@@ -636,7 +655,7 @@ def sum_of_natural_numbers(n):
         return n + sum_of_natural_numbers(n - 1)
 
 # Prompt user for a positive integer
-number = int(input("Enter a positive integer: "))
+number = int(input("Enter a positive integer: "))  # e.g., 5
 
 # Check if input is a valid positive integer
 if isinstance(number, int) and number > 0:
@@ -645,9 +664,15 @@ if isinstance(number, int) and number > 0:
     print(f"The sum of natural numbers up to {number} is: {sum_result}")
 else:
     print("Please enter a valid positive integer.")
+
+# --- Sample Output (for input 5) ---
+# Enter a positive integer: 5
+# The sum of natural numbers up to 5 is: 15
 ```
 
-### 27. Guess a Random Number
+### 27. Guess The Number
+This program generates a random number between 1 and 100.
+The user tries to guess the number, and the program gives hints until the correct guess is made.
 ```python
 import random
 
@@ -677,9 +702,18 @@ while user_guess != random_number:
             print(f"Congratulations! You guessed the correct number {random_number} in {attempts} attempts.")
     else:
         print("Please enter a valid number.")
+
+# --- Sample Output ---
+# Guess the random number (between 1 and 100): 50
+# Too low! Try again.
+# Guess the random number (between 1 and 100): 75
+# Too high! Try again.
+# Guess the random number (between 1 and 100): 68
+# Congratulations! You guessed the correct number 68 in 3 attempts.
 ```
 
 ### 28. Shuffle Deck of Cards
+This program creates a standard deck of 52 playing cards and shuffles it using Python's random module.
 ```python
 import random
 
@@ -710,9 +744,17 @@ shuffled_deck = initial_deck.copy()  # Create a copy to avoid modifying the orig
 shuffle_deck(shuffled_deck)
 print("\nShuffled Deck:")
 print(shuffled_deck)
+
+# --- Sample Output (partial, will vary each run) ---
+# Initial Deck:
+# ['2 of Hearts', '3 of Hearts', ..., 'Ace of Spades']
+#
+# Shuffled Deck:
+# ['10 of Diamonds', '3 of Spades', ..., 'King of Hearts']
 ```
 
 ### 29. Display Fibonacci Sequence Using Recursion
+This program displays the Fibonacci sequence up to a given number of terms using recursion.
 ```python
 # Function to generate the Fibonacci sequence using recursion
 def fibonacci(n):
@@ -736,16 +778,17 @@ else:
 ```
 
 ### 30. Find Factorial of Number Using Recursion
+This program calculates the factorial of a number using recursion.
 ```python
-# Function to calculate the factorial using recursion
+# Function to find the factorial of a number using recursion
 def factorial(n):
     if n == 0 or n == 1:
         return 1
     else:
         return n * factorial(n - 1)
 
-# Prompt user for a non-negative integer
-number = int(input("Enter a non-negative integer: "))
+# Prompt user for a number
+number = int(input("Enter a number to find its factorial: "))  # e.g., 5
 
 # Check if input is a valid non-negative integer
 if isinstance(number, int) and number >= 0:
@@ -754,6 +797,10 @@ if isinstance(number, int) and number >= 0:
     print(f"The factorial of {number} is: {result}")
 else:
     print("Please enter a valid non-negative integer.")
+
+# --- Sample Output (for input 5) ---
+# Enter a number to find its factorial: 5
+# The factorial of 5 is: 120
 ```
 
 ### 31. Convert Decimal to Binary
