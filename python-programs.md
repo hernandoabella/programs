@@ -1111,6 +1111,7 @@ print(f"Does the string contain '{substring_to_check}'? {contains_substring}")
 ```
 
 ### 48. Compare Two Strings
+```python
 # Example strings
 string1 = "Hello"
 string2 = "hello"
@@ -1124,6 +1125,7 @@ case_insensitive_comparison = string1.lower() == string2.lower()
 # Display the results
 print(f"Case-sensitive comparison: {case_sensitive_comparison}")
 print(f"Case-insensitive comparison: {case_insensitive_comparison}")
+```
  
 ### 49. Encode a String to Base64
 ```python
