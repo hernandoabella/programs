@@ -46,42 +46,42 @@ const booksData: Book[] = [
     title: "200+ Python Programs for Beginners",
     author: "Hernando Abella",
     image: "/python-programs.jpg",
-    link: "https://amzn.to/cleancode"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CVLHT1VP"
   },
   {
     id: 2,
     title: "200+ C Programs for Beginners",
     author: "Hernando Abella",
     image: "/c-programs.jpg",
-    link: "https://amzn.to/pragmatic"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0DNDB7K59"
   },
   {
     id: 3,
     title: "200+ C++ Programs for Beginners",
     author: "Hernando Abella",
     image: "/cpp-programs.png",
-    link: "https://amzn.to/jsgoodparts"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0FWHC6B5S"
   },
   {
     id: 4,
     title: "200+ Java Programs for Beginners",
     author: "Hernando Abella",
     image: "/java-programs.jpg",
-    link: "https://amzn.to/pythoncc"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0DM4HMBG8"
   },
   {
     id: 5,
     title: "200+ Rust Programs for Beginners",
     author: "Erich Gamma",
     image: "/rust-programs.jpg",
-    link: "https://amzn.to/designpatterns"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0DHT9R764"
   },
   {
     id: 6,
     title: "200+ JavaScript Programs for Beginners",
     author: "Hernando Abella",
     image: "/javascript-programs.jpg",
-    link: "https://amzn.to/clrs"
+    link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CQ4FBQ8H"
   }
 ];
 
