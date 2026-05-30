@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { 
   SiJavascript, 
   SiPython, 
-  SiOpenjdk,
   SiCplusplus, 
   SiRust 
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { FiBookOpen, FiX, FiMenu } from "react-icons/fi";
 
 // ─── Types ──────────────────────────────────────────────────────────────
 
@@ -28,6 +29,61 @@ interface Language {
   color: string;
   syntax: string;
 }
+
+interface Book {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+  link: string;
+}
+
+// ─── Books Data ─────────────────────────────────────────────────────────
+
+const booksData: Book[] = [
+  {
+    id: 1,
+    title: "200+ Python Programs for Beginners",
+    author: "Hernando Abella",
+    image: "/python-programs.jpg",
+    link: "https://amzn.to/cleancode"
+  },
+  {
+    id: 2,
+    title: "200+ C Programs for Beginners",
+    author: "Hernando Abella",
+    image: "/c-programs.jpg",
+    link: "https://amzn.to/pragmatic"
+  },
+  {
+    id: 3,
+    title: "200+ C++ Programs for Beginners",
+    author: "Hernando Abella",
+    image: "/cpp-programs.png",
+    link: "https://amzn.to/jsgoodparts"
+  },
+  {
+    id: 4,
+    title: "200+ Java Programs for Beginners",
+    author: "Hernando Abella",
+    image: "/java-programs.jpg",
+    link: "https://amzn.to/pythoncc"
+  },
+  {
+    id: 5,
+    title: "200+ Rust Programs for Beginners",
+    author: "Erich Gamma",
+    image: "/rust-programs.jpg",
+    link: "https://amzn.to/designpatterns"
+  },
+  {
+    id: 6,
+    title: "200+ JavaScript Programs for Beginners",
+    author: "Hernando Abella",
+    image: "/javascript-programs.jpg",
+    link: "https://amzn.to/clrs"
+  }
+];
 
 // ─── Data: Programs by Language ─────────────────────────────────────────
 
@@ -97,7 +153,6 @@ console.log(isPalindrome("racecar")); // true`,
       difficulty: "Intermediate"
     }
   ],
-
   python: [
     {
       id: 1,
@@ -156,7 +211,6 @@ print(is_palindrome("racecar"))  # True`,
       difficulty: "Intermediate"
     }
   ],
-
   java: [
     {
       id: 1,
@@ -241,7 +295,6 @@ public class Palindrome {
       difficulty: "Intermediate"
     }
   ],
-
   cpp: [
     {
       id: 1,
@@ -335,7 +388,6 @@ int main() {
       difficulty: "Intermediate"
     }
   ],
-
   rust: [
     {
       id: 1,
@@ -413,11 +465,11 @@ fn main() {
   ]
 };
 
-// Languages with correct react-icons names
+// Languages with icons
 const languages: Language[] = [
   { id: "javascript", name: "JavaScript", icon: <SiJavascript size={18} />, color: "#F7DF1E", syntax: "javascript" },
   { id: "python", name: "Python", icon: <SiPython size={18} />, color: "#3776AB", syntax: "python" },
-  { id: "java", name: "Java", icon: <SiOpenjdk size={18} />, color: "#ED8B00", syntax: "java" },
+  { id: "java", name: "Java", icon: <FaJava size={18} />, color: "#ED8B00", syntax: "java" },
   { id: "cpp", name: "C++", icon: <SiCplusplus size={18} />, color: "#00599C", syntax: "cpp" },
   { id: "rust", name: "Rust", icon: <SiRust size={18} />, color: "#CE422B", syntax: "rust" }
 ];
@@ -436,7 +488,7 @@ function CopyButton({ code }: { code: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="px-3 py-1 text-xs rounded bg-gray-700 hover:bg-gray-600 text-white transition"
+      className="px-3 py-1 text-xs rounded bg-gray-200 hover:bg-gray-300 text-gray-700 transition font-medium"
     >
       {copied ? "✅ Copied!" : "📋 Copy"}
     </button>
@@ -445,13 +497,13 @@ function CopyButton({ code }: { code: string }) {
 
 function DifficultyBadge({ difficulty }: { difficulty: string }) {
   const colors = {
-    Easy: "bg-green-500/20 text-green-400",
-    Intermediate: "bg-yellow-500/20 text-yellow-400",
-    Advanced: "bg-red-500/20 text-red-400"
+    Easy: "bg-green-100 text-green-700",
+    Intermediate: "bg-yellow-100 text-yellow-700",
+    Advanced: "bg-red-100 text-red-700"
   };
   
   return (
-    <span className={`px-2 py-0.5 rounded text-xs ${colors[difficulty as keyof typeof colors]}`}>
+    <span className={`px-2 py-0.5 rounded text-xs font-medium ${colors[difficulty as keyof typeof colors]}`}>
       {difficulty}
     </span>
   );
@@ -461,33 +513,33 @@ function ProgramCard({ program, syntax }: { program: Program; syntax: string }) 
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="border border-gray-700 rounded-lg overflow-hidden bg-gray-900">
+    <div className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition">
       <div 
-        className="p-4 cursor-pointer hover:bg-gray-800 transition"
+        className="p-4 cursor-pointer hover:bg-gray-50 transition"
         onClick={() => setExpanded(!expanded)}
       >
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="font-semibold text-white">
+            <h3 className="font-semibold text-gray-900">
               {program.id}. {program.title}
             </h3>
-            <p className="text-sm text-gray-400 mt-1">{program.description}</p>
+            <p className="text-sm text-gray-600 mt-1">{program.description}</p>
           </div>
           <DifficultyBadge difficulty={program.difficulty} />
         </div>
         <div className="flex items-center gap-2 mt-2">
-          <span className="text-xs text-gray-500">
+          <span className="text-xs text-gray-400">
             {expanded ? "▼ Click to hide" : "▶ Click to view code"}
           </span>
         </div>
       </div>
       
       {expanded && (
-        <div className="border-t border-gray-700">
+        <div className="border-t border-gray-200">
           <div className="relative">
             <SyntaxHighlighter
               language={syntax}
-              style={oneDark}
+              style={oneLight}
               customStyle={{
                 margin: 0,
                 padding: "1rem",
@@ -507,11 +559,95 @@ function ProgramCard({ program, syntax }: { program: Program; syntax: string }) 
   );
 }
 
+function BooksSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  return (
+    <>
+      {/* Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/30 z-40 transition-opacity"
+          onClick={onClose}
+        />
+      )}
+      
+      {/* Sidebar */}
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 flex flex-col ${
+        isOpen ? "translate-x-0" : "translate-x-full"
+      }`}>
+        {/* Header */}
+        <div className="flex justify-between items-center p-4 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <FiBookOpen className="text-blue-600" />
+            <h2 className="font-semibold text-gray-900">Recommended Books</h2>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 transition"
+          >
+            <FiX size={20} />
+          </button>
+        </div>
+        
+        {/* Books List */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {booksData.map((book) => (
+            <div key={book.id} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition group">
+              {/* Book Image - Full size */}
+              <div className="w-full">
+                <img
+                  src={book.image}
+                  alt={book.title}
+                  className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'w-full h-48 flex items-center justify-center bg-gray-100';
+                      fallback.innerHTML = '<svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>';
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
+              </div>
+              
+              {/* Book Info */}
+              <div className="p-3">
+                <h3 className="font-semibold text-sm text-gray-900 group-hover:text-blue-600 transition line-clamp-1">
+                  {book.title}
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.5">{book.author}</p>
+                <a
+                  href={book.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block w-full text-center px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs font-medium transition"
+                >
+                  Buy on Amazon →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Footer */}
+        <div className="p-4 border-t border-gray-200">
+          <p className="text-xs text-center text-gray-500">
+            📚 6 programming books recommended for you
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
 // ─── Main Component ─────────────────────────────────────────────────────
 
 export default function Home() {
   const [selectedLanguage, setSelectedLanguage] = useState("javascript");
   const [searchTerm, setSearchTerm] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const currentPrograms = programsData[selectedLanguage] || [];
   
@@ -523,68 +659,83 @@ export default function Home() {
   const currentLanguage = languages.find(l => l.id === selectedLanguage)!;
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2">💻 Code Programs</h1>
-          <p className="text-gray-400 text-sm">
-            Programming examples in multiple languages
-          </p>
-        </div>
-
-        {/* Language Selector */}
-        <div className="flex flex-wrap gap-2 justify-center mb-8">
-          {languages.map(lang => (
+    <>
+      <BooksSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      
+      <main className="min-h-screen bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          {/* Header with Sidebar Toggle */}
+          <div className="flex justify-between items-center mb-8">
+            <div className="text-center flex-1">
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">💻 Programs</h1>
+              <p className="text-gray-600 text-sm">
+                An endless buffet of programs
+              </p>
+            </div>
+            
+            {/* Sidebar Toggle Button */}
             <button
-              key={lang.id}
-              onClick={() => setSelectedLanguage(lang.id)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition ${
-                selectedLanguage === lang.id
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
+              onClick={() => setIsSidebarOpen(true)}
+              className="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 hover:bg-gray-50 rounded-lg transition text-sm text-gray-700 shadow-sm"
             >
-              <span className="text-base">{lang.icon}</span>
-              <span>{lang.name}</span>
+              <FiMenu size={18} />
+              <span className="hidden sm:inline">Books</span>
             </button>
-          ))}
-        </div>
-
-        {/* Search Bar */}
-        <div className="mb-6">
-          <input
-            type="text"
-            placeholder={`Search ${currentLanguage.name} programs...`}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm"
-          />
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-4 text-xs text-gray-400">
-          {filteredPrograms.length} program(s) found
-        </div>
-
-        {/* Programs */}
-        <div className="space-y-3">
-          {filteredPrograms.map(program => (
-            <ProgramCard
-              key={program.id}
-              program={program}
-              syntax={currentLanguage.syntax}
-            />
-          ))}
-        </div>
-
-        {/* Empty State */}
-        {filteredPrograms.length === 0 && (
-          <div className="text-center py-12 text-gray-500 text-sm">
-            <p>No programs found matching "{searchTerm}"</p>
           </div>
-        )}
-      </div>
-    </main>
+
+          {/* Language Selector */}
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {languages.map(lang => (
+              <button
+                key={lang.id}
+                onClick={() => setSelectedLanguage(lang.id)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition border ${
+                  selectedLanguage === lang.id
+                    ? "bg-blue-600 text-white border-blue-600 shadow-md"
+                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                }`}
+              >
+                <span className="text-base">{lang.icon}</span>
+                <span>{lang.name}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Search Bar */}
+          <div className="mb-6">
+            <input
+              type="text"
+              placeholder={`Search ${currentLanguage.name} programs...`}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-sm"
+            />
+          </div>
+
+          {/* Results Count */}
+          <div className="mb-4 text-xs text-gray-500">
+            {filteredPrograms.length} program(s) found
+          </div>
+
+          {/* Programs */}
+          <div className="space-y-3">
+            {filteredPrograms.map(program => (
+              <ProgramCard
+                key={program.id}
+                program={program}
+                syntax={currentLanguage.syntax}
+              />
+            ))}
+          </div>
+
+          {/* Empty State */}
+          {filteredPrograms.length === 0 && (
+            <div className="text-center py-12 text-gray-500 text-sm">
+              <p>No programs found matching "{searchTerm}"</p>
+            </div>
+          )}
+        </div>
+      </main>
+    </>
   );
 }
